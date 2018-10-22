@@ -168,7 +168,7 @@ class DBHelper {
    */
   static imageUrlForRestaurant(restaurant, size) {
     let largeImageUrl = restaurant.photograph.replace(
-      /\d/,
+      /\d+/,
       (match) => `${match}_${size}`
     );
     return `/img/${largeImageUrl}`;

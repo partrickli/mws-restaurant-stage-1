@@ -171,6 +171,12 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant, 'large');
+  const images = ['large', 'small'].map((size) => {
+    const imageUrl = DBHelper.imageUrlForRestaurant(restaurant, size);
+    const widths = { large: '800w', small: '300w' };
+    return `${imageUrl} ${widths[size]}`;
+  });
+  image.srcset = images.join(', ');
   li.append(image);
 
   const name = document.createElement('h1');

@@ -310,7 +310,7 @@ ul#restaurants-list {
 
 @media screen and (min-width: 600px) {
   #restaurants-list li {
-    width: 18%;
+    width: 45%;
     background-color: #fff;
     border: 2px solid #ccc;
     font-family: Arial, sans-serif;
