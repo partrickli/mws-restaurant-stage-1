@@ -227,16 +227,16 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
-if (navigator.serviceWorker) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker
-      .register('/sw.js')
-      .then((registration) => {
-        console.log(`Service worker registerred successfully ${registration}`);
-      })
-      .catch((error) => {
-        console.log('Service worker registration failed');
-        console.log(error);
-      });
-  });
-}
+// if (navigator.serviceWorker) {
+//   window.addEventListener('load', function() {
+//     navigator.serviceWorker
+//       .register('/sw.js')
+//       .then((registration) => {
+//         console.log(`Service worker registerred successfully ${registration}`);
+//       })
+//       .catch((error) => {
+//         console.log('Service worker registration failed');
+//         console.log(error);
+//       });
+//   });
+// }
