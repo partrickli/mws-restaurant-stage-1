@@ -102,7 +102,7 @@ nav h1 a {
   background-color: #eee;
   font-size: 17px;
   margin: 0;
-  width: calc(50% - 80px);
+  width: 100%;
 }
 
 /* Display list items side by side */
@@ -215,20 +215,34 @@ section#map-container {
 ul#restaurants-list {
   padding-inline-start: 0;
 }
+
+/* Break point for large viewport */
+
+@media screen and (min-width: 600px) {
+  #restaurants-list li {
+    width: 45%;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    font-family: Arial, sans-serif;
+    min-height: 380px;
+    text-align: left;
+  }
+  #restaurants-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
 /* ====================== Restaurant Details ====================== */
+body.inside {
+}
 .inside header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
-  position: fixed;
-  right: 0;
-  top: 80px;
-  width: 50%;
+  height: 500px;
+  width: 100%;
 }
 .inside #map {
   background-color: #ccc;
@@ -236,9 +250,7 @@ ul#restaurants-list {
   width: 100%;
 }
 .inside #footer {
-  bottom: 0;
-  position: absolute;
-  width: 50%;
+  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
@@ -255,25 +267,27 @@ ul#restaurants-list {
 }
 #restaurant-address {
   font-size: 12pt;
-  margin: 10px 0px;
+  margin: 20px, 50px;
+  width: 100%;
+  text-align: centre;
 }
 #restaurant-cuisine {
   background-color: #333;
   color: #ddd;
-  font-size: 12pt;
+  font-size: 16pt;
   font-weight: 300;
   letter-spacing: 10px;
   margin: 0 0 20px;
   text-align: center;
   text-transform: uppercase;
-  width: 90%;
+  width: 100%;
 }
 #restaurant-container,
+#map-container,
 #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
-  width: 50%;
+  width: 100%;
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -304,22 +318,12 @@ ul#restaurants-list {
 }
 #restaurant-hours td {
   color: #666;
+  font-size: 16px;
+  text-align: center;
+}
+table#restaurant-hours {
+  width: 100%;
 }
 
-/* Break point for large viewport */
-
-@media screen and (min-width: 600px) {
-  #restaurants-list li {
-    width: 45%;
-    background-color: #fff;
-    border: 2px solid #ccc;
-    font-family: Arial, sans-serif;
-    min-height: 380px;
-    text-align: left;
-  }
-  #restaurants-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
+@media screen and (max-width: 600px) {
 }
