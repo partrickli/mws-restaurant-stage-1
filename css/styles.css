@@ -64,6 +64,7 @@ section#restaurant-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
 }
 #maincontent {
   background-color: #f3f3f3;
@@ -262,8 +263,9 @@ body.inside {
   font-size: 20pt;
   font-weight: 200;
   letter-spacing: 0;
-  margin: 15px 0 30px;
+  margin: 15px 0 15px;
   text-transform: uppercase;
+  text-align: center;
   line-height: 1.1;
 }
 #restaurant-img {
@@ -273,7 +275,7 @@ body.inside {
   font-size: 12pt;
   margin: 20px, 50px;
   width: 100%;
-  text-align: centre;
+  text-align: center;
 }
 #restaurant-cuisine {
   background-color: #333;
@@ -284,7 +286,7 @@ body.inside {
   margin: 0 0 20px;
   text-align: center;
   text-transform: uppercase;
-  width: 100%;
+  width: 90%;
 }
 #restaurant-container,
 #map-container,
