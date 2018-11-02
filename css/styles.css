@@ -59,7 +59,7 @@ section {
 }
 section#restaurants-container {
   background-color: #f58500;
-  width: 33%;
+  width: 375px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -134,17 +134,21 @@ nav h1 a {
 }
 /* ====================== Map ====================== */
 #map {
-  height: 300px;
+  height: 100%;
   width: 100%;
   background-color: #ccc;
 }
 section#map-container {
-  width: 66%;
+  width: calc(100% - 375px);
+  height: 100vh;
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
-  height: 50px;
+  height: 150px;
   background-color: #3397db;
   align-items: center;
 }
@@ -174,8 +178,15 @@ section#map-container {
   list-style: outside none none;
   margin: 0;
   text-align: center;
+  overflow: scroll;
+  height: calc(100vh - 150px);
 }
 #restaurants-list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   width: 100%;
   background-color: #fff;
   border: 2px solid #ccc;
@@ -355,16 +366,4 @@ table#restaurant-hours {
 /* Break point for large viewport */
 
 @media screen and (min-width: 600px) {
-  #restaurants-list li {
-    background-color: #fff;
-    border: 2px solid #ccc;
-    font-family: Arial, sans-serif;
-    min-height: 380px;
-    text-align: left;
-  }
-  #restaurants-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
 }
