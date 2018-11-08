@@ -372,14 +372,6 @@ table#restaurant-hours {
   }
 }
 
-/* large size screen */
-@media screen and (min-width: 1200px) {
-  body {
-    width: 1200px;
-    margin: auto;
-  }
-}
-
 /* Break point for large viewport */
 
 @media screen and (min-width: 600px) {
