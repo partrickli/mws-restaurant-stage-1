@@ -22,7 +22,7 @@
     <!-- Beginning header -->
     <header>
       <!-- Beginning nav -->
-      <nav id="breadcrumb" role="navigation" aria-label="Breadcrumb">
+      <nav role="navigation" aria-label="Breadcrumb">
         <h1><a href="/">Restaurant Reviews</a></h1>
         <!-- Beginning breadcrumb -->
         <ul id="breadcrumb">
@@ -36,7 +36,9 @@
     <!-- Beginning main -->
     <main id="maincontent">
       <!-- Beginning map -->
-      <section id="map-container"><div id="map"></div></section>
+      <section id="map-container">
+        <div id="map" role="application" aria-label="location"></div>
+      </section>
       <!-- End map -->
       <!-- Beginning restaurant -->
       <section id="restaurant-container">
